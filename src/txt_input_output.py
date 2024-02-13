@@ -95,6 +95,6 @@ def write_file2(result, point, matrix):
 
         file.write(f"Sequence: {sequence}\n")
 
-        file.write(f"{coordinate}\n")
+        file.write(f"{coordinate}")
     
     print(f"File berhasil disimpan di {file_path}")

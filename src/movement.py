@@ -382,7 +382,7 @@ def vertical_first(sequences, num_sequences, matrix_size, matrix, points, buffer
                                                     current_seq_checked = y
                                                     length += len(sequences[y])
                                                     sequence = sequences[y]
-                                                    print("Sequence yg mau dicari: ", sequence)
+                                                    # print("Sequence yg mau dicari: ", sequence)
                                                     num = 0
                                                     indicator = -1
                                                 elif check_horizontal(sequences[y][0], temp_matrix, matrix_size, temp_result[-1][0]) and length+len(sequences[y]) > buffer_size-1:

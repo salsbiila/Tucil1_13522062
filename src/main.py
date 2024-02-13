@@ -3,6 +3,10 @@ from txt_input_output import *
 from movement import *
 from util import *
 
+print("Cyberpunk 2077 Breach Protocol Solver")
+print("====================================")
+print()
+
 print("Jenis Input")
 print("1. File .txt")
 print("2. CLI")
@@ -35,6 +39,11 @@ elif user_input == "2":
             print(matrix[row][col], end=" ")
         print()
 
+    for i in range(num_sequences):
+        print(f"Sekuen {i+1}: {sequences[i]}")
+        print(f"Poin: {points[i]}")
+    
+
 start = time.time()
     
 # print("Buffer Length:",  buffer_size)
@@ -54,28 +63,30 @@ end = time.time()
 print()
 
 if ver_res != [] and hor_res != []:
-    if ver_p > hor_p:
-        print_result(ver_res, ver_p)
+    if ver_p > hor_p and ver_res[0][0] == 0:
         result = ver_res
         point = ver_p
     else:
-        print_result(hor_res, hor_p)
-        result = hor_res
+        result = [(0, hor_res[1], -1, matrix[0][hor_res[1]])]
+        result.extend(hor_res)
         point = hor_p
 
-elif ver_res != []:
-    print_result(ver_res, ver_p)
+elif ver_res != [] and ver_res[0][0] == 0:
     result = ver_res
     point = ver_p
 
 elif hor_res != []:
-    print_result(hor_res, hor_p)
-    result = hor_res
+    result = [(0, hor_res[0][1], -1, matrix[0][hor_res[0][1]])]
+    result.extend(hor_res)
     point = hor_p
 
 else:
-    print("Point: 0")
+    point = 0
+    print(f"Point: {point}")
     print("Tidak ada sequence yang ditemukan")
+
+if point != 0:
+    print_result(result, point)
 
 print()
 print("Waktu eksekusi:", (end - start)*1000, "ms")
