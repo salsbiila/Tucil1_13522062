@@ -43,17 +43,7 @@ elif user_input == "2":
         print(f"Sekuen {i+1}: {sequences[i]}")
         print(f"Poin: {points[i]}")
     
-
 start = time.time()
-    
-# print("Buffer Length:",  buffer_size)
-# print("Matrix Size:", matrix_size)
-# print("Matrix:")
-# for row in matrix:
-#     print(row)
-# print("Number of Sequences:", num_sequences)
-# print("Sequences:", sequences)
-# print("Points:", points)
 
 hor_res, hor_p = horizontal_first(sequences, num_sequences, matrix_size, matrix, points, buffer_size)
 ver_res, ver_p = vertical_first(sequences, num_sequences, matrix_size, matrix, points, buffer_size)
