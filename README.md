@@ -11,9 +11,9 @@ Cyberpunk 2077 Breach Protocol merupakan sebuah mini game pada permainan Cyberpu
 
 * Jalankan file program `main.py` pada terminal, ataupun dengan mengguna executable file `main.exe`.
 * Pilih jenis masukkan yang dinginkan, masukkan dengan file txt atau menggunakan CLI. Masukkan yang menggunakan CLI akan menghasilkan matriks secara acak.
-* Setelah sekuens dan poin akhir muncul pada layar, Anda dapat memilih untuk menyimpan hasil keluaran dalam bentuk file .txt dengan memilih opsi y
+* Setelah sekuens dan poin akhir muncul pada layar, Anda dapat memilih untuk menyimpan hasil keluaran dalam bentuk file .txt dengan memilih opsi y.
 
 ## Author
 
-Salsabiila
+Salsabiila   
 NIM 13522062
